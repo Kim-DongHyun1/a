@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<!-- jQuery 1.8 or later, 33 KB -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Fotorama from CDNJS, 19 KB -->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>하양영화관</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">홈</a>
+    <a href="#movie" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">영화</a>
+    <a href="#ticketing" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">예매</a>
+    <a href="#event" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">이벤트</a>
+    <a href="#way" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">찾아오는길</a>
+    <a href="#login" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">로그인</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>하양영화관</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="movie">
+    <h1 class="w3-jumbo"><b>하양영화관에 오신것을 환영합니다!</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>추천 영화</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half" >
+      <div class="fotorama"
+         data-nav="thumbs" data-autoplay="true" data-loop="true">
+      <img src="helminth.PNG" data-caption="기생충">
+      <img src="Aladdin.PNG" data-caption="알라딘">
+      <img src="Wicked_person.PNG" data-caption="악인전">
+      <img src="Godzilla.PNG" data-caption="고질라">
+      <img src="0.0MHz.PNG" data-caption="0.0MH">
+      <img src="End_game.PNG" data-caption="엔드게임">
+      <img src="Gulkaps.PNG" data-caption="걸캅스">
+      <img src="Church_brother.PNG" data-caption="교회오빠">
+      <img src="Rocketman.PNG" data-caption="로켓맨">
+      <img src="Young_client.PNG" data-caption="어린 의뢰인">
+        </div>
+      </div>
+
+      <div class="w3-half">
+        <h2>영화정보를 확인하고 싶다면 클릭하세요.</h2>
+        <img src="helminth.PNG" data-caption="기생충" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=161967')">
+        <img src="Aladdin.PNG" data-caption="알라딘" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=163788')">
+        <img src="Wicked_person.PNG" data-caption="악인전" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=177967')">
+        <img src="Godzilla.PNG" data-caption="Godzilla" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=137327')">
+        <img src="0.0MHz.PNG" data-caption="0.0MH" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=177371')">
+        <img src="End_game.PNG" data-caption="엔드게임" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=136900')">
+        <img src="Gulkaps.PNG" data-caption="걸캅스" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=174065')">
+        <img src="Church_brother.PNG" data-caption="교회오빠" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=183132')">
+        <img src="Rocketman.PNG" data-caption="로켓맨" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=181704')">
+        <img src="Young_client.PNG" data-caption="어린 의뢰인" width="120" height="150" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=180169')">
+
+     </div>
+
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="ticketing" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>예매</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <div class="w3-half">
+        <img src="helminth.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="기생충">
+        <img src="Wicked_person.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="악인전">
+        <img src="0.0MHz.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="0.0MHz">
+        <img src="Gulkaps.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="걸캅스">
+        <img src="Rocketman.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="로켓맨">
+      </div>
+
+      <div class="w3-half">
+        <img src="Aladdin.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="알라딘">
+        <img src="Godzilla.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="고질라">
+        <img src="End_game.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="엔드게임">
+        <img src="Church_brother.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="교회오빠">
+        <img src="Young_client.PNG" style="width:100%" onclick="window.open('moiveTicketing_calendar.html','영화예매_달력','width=430, height=500, location=no, status=no, scrollbars=yes');" alt="어린_의뢰인">
+      </div>
+
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="event" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>이벤트</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+
+    <p><b>전체 이벤트 </b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="no_img.PNG" alt="이벤트 사진" style="width:100%">
+        <div class="w3-container">
+          <h3>조조영화 5천원!</h3>
+          <p class="w3-opacity">오전 7:00~10:00에 5천원에 영화보자!</p>
+          <p>오전 7:00~10:00에 5천원에 영화를 관람하실수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="no_img.PNG" alt="이벤트 사진" style="width:100%">
+        <div class="w3-container">
+          <h3>대학생 할인</h3>
+          <p class="w3-opacity">종강했으니 영화보자!</p>
+          <p>방학시즌에 학생증지참하여 보여주시면 2천원 할인해드립니다.(대구가톨릭대학교학생에 한함.)</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="no_img.PNG" alt="이벤트 사진" style="width:100%">
+        <div class="w3-container">
+          <h3>영화보고 상품받자!</h3>
+          <p class="w3-opacity">영화보고 상품받고 일석이조!</p>
+          <p>월 5회이상 영화를 관람하시면 소정의 상품을 지급해드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="way" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>찾아오는길</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>하양 영화관은 실제 존재하지않기 때문에 대구가톨릭대학교 지도로 대체합니다.</p>
+  </div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12925.690318566076!2d128.807779!3d35.9121552!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x73386aadf1c5fa44!2z64yA6rWs6rCA7Yao66at64yA7ZWZ6rWQIO2aqOyEsey6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1559582104287!5m2!1sko!2skr" width="640" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  <!-- Contact -->
+  <div class="w3-container" id="login" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>로그인.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>예매를 하실려면 로그인을 하셔야합니다.</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>아이디</label>
+        <input class="w3-input w3-border" type="text" name="id" required>
+      </div>
+      <div class="w3-section">
+        <label>비밀번호</label>
+        <input class="w3-input w3-border" type="text" name="password" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">로그인</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by Kim Dong - hyun</p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
